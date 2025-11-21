@@ -51,6 +51,7 @@ result:  | n |
          '---'
 }
 begin
+	TextColor(lightblue);
 	GotoXY(x - 2, y - 1); write('.---.');
 	GotoXY(x - 2, y);     write('|');
 	GotoXY(x + 2, y);     write('|');
@@ -58,6 +59,7 @@ begin
 	GotoXY(x, y);
 	write(value);
 	GotoXY(1, 1);
+	write(#27'[0m');	{ reset color }
 end;
 
 
